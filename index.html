@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>One Page Wonder - NewsLetter Template</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom fonts for this template -->
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+
+  </head>
+
+  <body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="#">News Letter</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <link href="css/one-page-wonder.min.css" rel="stylesheet">
+
+              <a class="nav-link" href="#">Mounika</a>
+
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Logout</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <header class="masthead text-center text-white">
+      <div class="masthead-content">
+        <div class="container">
+          <h1 class="masthead-heading mb-0">FIFTH THIRD BANK</h1>
+          <h2 class="masthead-subheading mb-0">ATM</h2>
+          <!--<a href="#" class="btn btn-primary btn-xl rounded-pill mt-5">Learn More</a>-->
+        </div>
+      </div>
+      <div class="bg-circle-1 bg-circle"></div>
+      <div class="bg-circle-2 bg-circle"></div>
+      <div class="bg-circle-3 bg-circle"></div>
+      <div class="bg-circle-4 bg-circle"></div>
+    </header>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="rounded" alt="Cinque Terre" src="img/04.jpg" width="504" height="336">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 id="h0" class="display-4">For those about to rock...</h2>
+              <p id="p0" >aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+              <button id="edit" onclick="edit()">Edit</button>
+              <button id="save" onclick="save()">Save</button>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6">
+            <div class="p-5">
+              <img class="img-fluid rounded-circle" src="img/02.jpg" alt="">
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="p-5">
+              <h2 id="h1" class="display-4">We salute you!</h2>
+              <p id="p1" >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+              <button id="edit" onclick="edit1()">Edit</button>
+              <button id="save" onclick="save1()">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section>
+      <div class="container">
+        <div class="row align-items-center">
+          <div class="col-lg-6 order-lg-2">
+            <div class="p-5">
+              <img class="img-thumbnail" src="img/03.jpg" alt="Cinque Terre">
+            </div>
+          </div>
+          <div class="col-lg-6 order-lg-1">
+            <div class="p-5">
+              <h2 id="h2" class="display-4">Let there be rock!</h2>
+              <p id="p2"  >Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod aliquid, mollitia odio veniam sit iste esse assumenda amet aperiam exercitationem, ea animi blanditiis recusandae! Ratione voluptatum molestiae adipisci, beatae obcaecati.</p>
+              <button id="edit" onclick="edit2()">Edit</button>
+              <button id="save" onclick="save2()">Save</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-5 bg-black">
+      <div class="container">
+        <p class="m-0 text-center text-white small">Copyright &copy; Your Website 2018</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  </body>
+
+</html>
+
+<script>
+
+function edit()
+{
+  document.getElementById('p0').contentEditable='true';
+  document.getElementById('h0').contentEditable='true';
+}
+
+function edit1()
+{
+  document.getElementById('p1').contentEditable='true';
+  document.getElementById('h1').contentEditable='true';
+
+}
+
+function edit2()
+{
+  document.getElementById('p2').contentEditable='true';
+  document.getElementById('h2').contentEditable='true';
+}
+
+function save()
+{
+  var theContent = $('#p0');
+  var editedContent   = theContent.html();
+  localStorage.newContent1 = editedContent;
+  document.getElementById('p0').contentEditable='false';
+
+  var theContent = $('#h0');
+  var editedContent   = theContent.html();
+  localStorage.newContent4 = editedContent;
+  document.getElementById('h0').contentEditable='false';
+
+}
+
+function save1()
+{
+  var theContent = $('#p1');
+  var editedContent   = theContent.html();
+  localStorage.newContent2 = editedContent;
+  document.getElementById('p1').contentEditable='false';
+
+  var theContent = $('#h1');
+  var editedContent   = theContent.html();
+  localStorage.newContent5 = editedContent;
+  document.getElementById('h1').contentEditable='false';
+}
+
+function save2()
+{
+  var theContent = $('#p2');
+  var editedContent   = theContent.html();
+  localStorage.newContent3 = editedContent;
+  document.getElementById('p2').contentEditable='false';
+
+  var theContent = $('#h2');
+  var editedContent   = theContent.html();
+  localStorage.newContent6 = editedContent;
+  document.getElementById('h2').contentEditable='false';
+}
+
+if(localStorage.getItem('newContent1')) {
+ document.getElementById("p0").innerHTML =localStorage.getItem('newContent1');
+}
+
+if(localStorage.getItem('newContent2')) {
+ document.getElementById("p1").innerHTML =localStorage.getItem('newContent2');
+}
+
+if(localStorage.getItem('newContent3')) {
+ document.getElementById("p2").innerHTML =localStorage.getItem('newContent3');
+}
+
+if(localStorage.getItem('newContent4')) {
+ document.getElementById("h0").innerHTML =localStorage.getItem('newContent4');
+}
+
+if(localStorage.getItem('newContent5')) {
+ document.getElementById("h1").innerHTML =localStorage.getItem('newContent5');
+}
+
+if(localStorage.getItem('newContent6')) {
+ document.getElementById("h2").innerHTML =localStorage.getItem('newContent6');
+}
+
+
+</script>
